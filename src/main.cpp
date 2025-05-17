@@ -4,14 +4,13 @@
 
 
 int main() {
-    DataManager* dataManager = new DataManager();
+    DataManager dataManager;
+    dataManager.initCurlSession();
 
     do {
         //something
     } while (true);
 
-
-    delete dataManager;
 
     return 0;
 }

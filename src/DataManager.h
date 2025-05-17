@@ -13,10 +13,13 @@ struct CurlSession {
 
 class DataManager {
     public:
+        static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* output);
+
         DataManager();
         ~DataManager();
 
         bool initCurlSession();
+        void destroyCurlSession();
     
     private:
         std::string createSessionToken();

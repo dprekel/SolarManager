@@ -23,6 +23,7 @@ class DataManager {
     
     private:
         std::string createSessionToken();
+        std::string extractToken(std::string& html);
 
         CurlSession curlSession;
 };
